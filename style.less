@@ -1,5 +1,146 @@
-@color-base: #4685c0;
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@mobile:    ~"only screen and (min-width: 250px) and (max-width: 786px)";
 
 body{
-    background-color: @color-base;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Questrial', sans-serif;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    header{
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        z-index: 10;
+        width: 100%;
+
+        .headerContainer{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+
+            h1{
+                font-weight: 600;
+                font-size: 25px;
+            }
+
+            .navMenu{
+                display: flex;
+                gap: 35px;
+                align-items: center;
+                justify-content: center;
+                
+                a{
+                    transition: all 0.3s ease-in-out;
+                    font-size: 20px;
+                }
+                a:hover{
+                    transform: scale(1.05);
+                }
+
+                @media @mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    footer{
+        position : absolute;
+        border-top: 1px solid #ddd;
+        bottom : 0;
+        height: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 0 25px 0;
+        @media @mobile {
+            height: 350px;
+            margin-bottom: 50px;
+        }
+
+        .footerContainer{
+            width: 60%;
+            height: 70%;
+            display: flex;
+            @media @mobile {
+                display: grid;
+                width: 90%;
+                height: 100%;
+            }
+        }
+
+        .footerLeft{
+            display: grid;
+            font-size: 50px;
+            width: 50%;
+            span{
+                width: 80%;
+                @media @mobile {
+                    width: 100%;
+                }
+                a{
+                    cursor: pointer;
+                }
+            }
+
+            @media @mobile {
+                width: 100%;
+            }
+        }
+
+        .footerLeft span:last-child{
+            font-size: 18px;
+            position: absolute;
+            bottom: 50px;
+            @media @mobile {
+                display: none;
+                bottom: 0;
+            }
+        }
+
+        .footerRight{
+            display: grid;
+            width: 50%;
+            font-size: 40px;
+            font-weight: 600;
+            align-items: center;
+            justify-content: center;
+
+            @media @mobile {
+                font-size: 35px;
+                justify-content: left;
+                margin-top: 3vh;
+            }
+        }
+
+        .footerRight ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+           li{
+            width:33.33%;
+            line-height: 40px;
+            list-style-type:none;
+            transition: all 0.3s ease-in-out;
+            }
+        }
+        ul:hover li{
+            opacity:0.5;
+        }
+        ul li:hover{
+            opacity:1;
+            cursor: pointer;
+        }
+    }
 }
