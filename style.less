@@ -195,6 +195,7 @@ body{
                 display: grid;
                 justify-content: unset;
                 width: 80%;
+                height: 450px;
             }
 
             img{
@@ -203,16 +204,13 @@ body{
                 right: auto;
                 margin-top: 125px;
                 float: right;
+                position: relative;
+
                 @media @mobile{
-                    margin-top: 115px;
                     width: 200px;
                     height: 200px;
+                    margin-top: 134px;
                 }
-
-                @media @mobile2stage{
-                    margin-top: 82px;
-                }
-                
             }
 
             img:hover{
@@ -221,7 +219,6 @@ body{
 
                 @media @mobile{
                     transform: none;
-                    margin-top: 115px;
                 }
             }
 
@@ -231,6 +228,7 @@ body{
                 margin-left: 5%;
                 h3{
                     font-size: 40px;
+                    height: 60px;
                     cursor: default;
 
                     @media @mobile{
