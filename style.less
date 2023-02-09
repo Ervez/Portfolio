@@ -10,12 +10,22 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Questrial', sans-serif;
-
+    font-weight: normal!important;
     a{
         text-decoration: none;
         color: black;
     }
 
+    @media @mobile{
+        li{
+            font-weight: 400;
+        }
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-family: 'Questrial', sans-serif;;
+        font-weight: normal!important;
+    }
     header{
         position: fixed;
         left: 0;
