@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @mobile:    ~"only screen and (min-width: 320px) and (max-width: 786px)";
+@mobile2stage:    ~"only screen and (min-width: 320px) and (max-width: 387px)";
 @tablet:    ~"only screen and (min-width: 787px) and (max-width: 1300px)";
 @desktop2stage:    ~"only screen and (min-width: 787px) and (max-width: 1643px)";
 body{
@@ -128,9 +129,9 @@ body{
         }
 
         @media @mobile{
-            margin-left: 9%;
-            margin-right: 9%;
-            width: 82%;
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 80%;
         }
         .containerHeader{
             text-align: center;
@@ -188,7 +189,7 @@ body{
             @media @mobile{
                 display: grid;
                 justify-content: unset;
-                width: 100%;
+                width: 80%;
             }
 
             img{
@@ -197,9 +198,14 @@ body{
                 right: auto;
                 margin-top: 125px;
                 float: right;
-                transition: all 0.6s ease-in-out;
                 @media @mobile{
-                    margin-top: -28px;
+                    margin-top: 115px;
+                    width: 200px;
+                    height: 200px;
+                }
+
+                @media @mobile2stage{
+                    margin-top: 82px;
                 }
                 
             }
@@ -210,7 +216,7 @@ body{
 
                 @media @mobile{
                     transform: none;
-                    margin-top: -28px;
+                    margin-top: 115px;
                 }
             }
 
@@ -221,6 +227,11 @@ body{
                 h3{
                     font-size: 40px;
                     cursor: default;
+
+                    @media @mobile{
+                        font-size: 30px;
+                    }
+
                 }
 
                 a{
@@ -231,6 +242,7 @@ body{
 
                     @media @mobile{
                         margin-top: 0;
+                        font-size: 20px;
                     }
                 }
 
