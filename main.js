@@ -6,4 +6,12 @@ $(function() {
         }, function(){
         $(this).css("box-shadow", "inset 0 0 0 0 black");
       });
+
+      $(".menuHamb").click(function(){
+        $(".bar1").toggleClass("bar1change");
+        $(".bar2").toggleClass("bar2change");
+        $(".bar3").toggleClass("bar3change");
+        $(".navMenu").toggleClass("navMenuMobile");
+      });
+
 });
