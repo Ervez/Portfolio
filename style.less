@@ -1,9 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @mobile:    ~"only screen and (min-width: 320px) and (max-width: 786px)";
-@mobile2stage:    ~"only screen and (min-width: 320px) and (max-width: 387px)";
 @tablet:    ~"only screen and (min-width: 787px) and (max-width: 1300px)";
-@desktop2stage:    ~"only screen and (min-width: 787px) and (max-width: 1643px)";
 body{
     background-color: white;
     margin: 0;
@@ -95,12 +93,6 @@ body{
                     transform: scale(1.05);
                 }
 
-                @media @mobile {
-                    visibility: collapse;
-                    display: none;
-
-                }
-
                 @keyframes slide {
                     from {height: 0;}
                     to {height: 25vh;}
@@ -118,94 +110,48 @@ body{
                 display: grid;
             }
         }
-
-        @media @tablet{
-            background-color: white
-        }
-
-        @media @mobile{
-            background-color: white
-        }
     }
 
     .container{
-        margin-left: 15%;
-        margin-right: 15%;
-        margin-top: 120px;
-        margin-bottom: 120px;
-        width: 70%;
+        width: 500px;
         height: 1000px;
         display: grid;
         justify-items: center;
+        margin: auto;
 
         .box{
             height: 300px;
         }
 
-        @media @mobile{
-            margin-left: 10%;
-            margin-right: 10%;
-            width: 80%;
-        }
         .containerHeader{
             text-align: center;
-            font-size: 50px;
+            font-size: 35px;
             display: flex;
             justify-content: center;
             align-items: center;
-
-            
-            @media @tablet{
-                font-size: 30px;
-            }
-
-            @media @mobile{
-               font-size: 20px;
-            }
+            width: 500px;
             
             h2{
                 box-shadow: inset 0 0 0 0 black;
                 color: black;
-                transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-                width: 70%;
-
-                @media @tablet{
-                    width: 75%;
-                }
-    
-                @media @mobile{
-                   width: 90%;
-                }
-                
+                transition: color .3s ease-in-out, box-shadow .3s ease-in-out;              
+                padding: 20px;  
             }
 
             h2:hover {
                 color: white;
-                padding: 10px;
                 cursor: default;
               }
         }
 
         .containerImage{
             background-color: #f5f5f5;
-            width: 60%;
+            width: 800px;
             height: 400px;
             padding: 25px;
             border-radius: 17px;
-            transition: all 0.6s ease-in-out;
             display: flex;
             justify-content: space-between;
-
-            @media @desktop2stage{
-                width: 100%;
-            }
-
-            @media @mobile{
-                display: grid;
-                justify-content: unset;
-                width: 80%;
-                height: 450px;
-            }
 
             img{
                 width: 300px;
@@ -215,23 +161,7 @@ body{
                 float: right;
                 position: relative;
 
-                @media @mobile{
-                    width: 200px;
-                    height: 200px;
-                    margin-top: 134px;
-                }
             }
-
-            img:hover{
-                transform: scale(1.05);
-                margin-top: 115px;
-
-                @media @mobile{
-                    transform: none;
-                    margin-top: 134px;
-                }
-            }
-
             .containerImageLeftBox{
                 display: grid;
                 justify-content: space-between;
@@ -264,11 +194,6 @@ body{
                         margin-top: 0;
                     }
                 }
-
-                @media @desktop2stage{
-                    display: unset;
-                }
-
             }
         }
         .containerImage:hover{
@@ -288,7 +213,7 @@ body{
         justify-content: center;
         align-items: center;
         padding: 25px 0 25px 0;
-
+        position: fixed;
         @media @mobile {
             height: 350px;
             margin-bottom: 50px;
@@ -370,6 +295,74 @@ body{
         ul li:hover{
             opacity:1;
             cursor: pointer;
+        }
+    }
+}
+
+
+@media @mobile {
+    body{
+
+        header{
+            .headerContainer{
+                background-color: white;
+
+                .navMenu{
+                    display: none; 
+                    visibility: collapse;
+                }
+
+                .navMenuMobile {
+                    position: absolute;
+                    width: 90%;
+                    margin-top: 80px;
+                    background-color: white;
+                    z-index: 100;
+                    height: 25vh;
+                    visibility: visible;
+                    display: grid;
+                }
+            }
+        }
+        div.container{
+            width: 320px;
+            .containerHeader{
+                width: 200px;
+                font-size: 28px;
+                margin-top: 100px;
+            }
+
+            .containerImage{
+                background-color: #f5f5f5;
+                width: 300px;
+                margin-top: 50px;
+                height: 350px;
+                display: grid;
+                justify-content: unset;
+                .containerImageLeftBox {
+                    h3{
+                        height: 20px;
+                    }
+                }
+                img{
+                    width: 250px;
+                    height: 250px;
+                    margin-top: 24px;
+                }
+
+            }
+        }
+    }
+
+}
+
+@media @tablet{
+    body{
+
+        header{
+            .headerContainer{
+                background-color: white;
+            }
         }
     }
 }
